@@ -16,3 +16,11 @@ export function getDateString(date: Date): string {
 
     return `${year}_${month}_${day}_${hour}_${min}_${sec}`;
 }
+
+export const wait = (timerLen: number) => {
+    return new Promise<void>((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, timerLen);
+    });
+};
